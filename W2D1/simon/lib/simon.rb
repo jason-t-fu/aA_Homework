@@ -35,9 +35,14 @@ class Simon
   end
 
   def require_sequence
-    puts "Enter the colors in sequence, each followed by a comma:"
-    input = gets.chomp.split(",").each(&:downcase)
-    check_sequence(input)
+    puts "Enter the colors in sequence, each followed enter:"
+    seq.each do |color|
+      input = gets.chomp.downcase
+      unless color == input
+        self.game_over = true 
+        break
+      end
+    end
   end
 
   def add_random_color
@@ -56,15 +61,6 @@ class Simon
     self.sequence_length = 1
     self.game_over = false
     self.seq = []
-  end
-
-  def check_sequence(input)
-    seq.each_index do |idx|
-      if input[idx] != seq[idx]
-        self.game_over = true 
-        return
-      end
-    end
   end
 end
 
