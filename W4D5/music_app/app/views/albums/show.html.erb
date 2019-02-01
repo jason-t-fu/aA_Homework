@@ -1,0 +1,11 @@
+<h1></h1>
+
+<%= @album.title %><br>
+
+<footer>
+  <h2>Links</h2>
+  <a href="">New Track</a><br>
+  <%= link_to "Edit Album", edit_album_url %>
+  <%= button_to "Destroy Album", album_url(@album), method: :delete %>
+  <%= link_to "Back to #{@band.name}", band_url(@band) %>
+</footer>
