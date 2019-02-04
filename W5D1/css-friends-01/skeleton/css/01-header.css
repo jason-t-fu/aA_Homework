@@ -1,0 +1,31 @@
+/* PHASE 1: Header */
+
+body {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+ul {
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  margin: auto;
+}
+
+.header-nav {
+  display: inherit;
+  justify-content: space-between;
+}
+
+.header-logo {
+
+}
+
+.header-list {
+
+}
